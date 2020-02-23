@@ -1,4 +1,6 @@
 #! /bin/bash
 
-wget https://github.com/itamae-kitchen/mitamae/releases/download/v1.8.0/mitamae-x86_64-linux.tar.gz 
-tar -xf mitamae-x86_64-linux.tar.gz 
+wget https://github.com/itamae-kitchen/mitamae/releases/latest/download/mitamae-x86_64-linux.tar.gz
+if [ -e ./mitamae-x86_64-linux.tar.gz ]; then
+	tar -xf mitamae-x86_64-linux.tar.gz
+fi

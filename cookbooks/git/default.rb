@@ -1,10 +1,11 @@
+git_config_dir = File.join(node[:config_home_dir], '/git')
 
-git_config_dir = "#{node[:config_home_dir]}/git"
+package 'git'
 
 directory git_config_dir do
-	  action :create
+  action :create
 end
 
 link "#{git_config_dir}/config" do
-	to './cookbooks/git/files/config'
+  to File.expand_path('cookbooks/git/files/config')
 end
